@@ -13,7 +13,7 @@ var pcert = fs.readFileSync('/etc/letsencrypt/live/s1.damasistem.com/cert.pem');
 
 var SERVER_PORT = 3002;
 var options = {
-    //hostname: 'https://s1.damasistem.com',
+    hostname: 'https://testserverexploreeu.herokuapp.com/',
     port: SERVER_PORT,  
    /* key: pkey, 
     cert: pcert,
