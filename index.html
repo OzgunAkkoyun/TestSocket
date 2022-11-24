@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>DamaSistem</title>
 <meta name="author" content="DamaSistem">
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+    // emit gönder, on dinleme modu
+	  $(function () {
 
+      let uniq = Math.random();
+
+	    var socket = io();
+	   
+
+	    socket.on('con', function(msg){
+            $('#con').innerHTML = msg;
+	    });
+
+	    
+	  });
+	</script>
+</head>
 <body>
-<h1>Deneme</h1>
+<h1 id="con"></h1>
 </body>
 </html>

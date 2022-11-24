@@ -12,6 +12,7 @@ connections = [];
 io.on('connection', (socket) => {
 	connections.push(socket);
 	console.log('Connected: %s kadar kişi bağlı',connections.length);
+	socket.emit('con',connections.length);
 	socket.on('disconnect',function(data){
 		connections.splice(connections.indexOf(socket),1);
 		
