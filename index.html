@@ -12,13 +12,10 @@
     // emit gönder, on dinleme modu
 	  $(function () {
 
-      let uniq = Math.random();
-
 	    var socket = io();
 	   
-
-	    socket.on('con', function(msg){
-            $('#con').innerHTML = msg;
+	    socket.on('asd', function(msg){
+            $('#con')[0].innerHTML = msg;
 	    });
 
 	    

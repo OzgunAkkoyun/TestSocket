@@ -9,14 +9,16 @@ app.get('/', (req, res) => {
 });
 
 connections = [];
+
 io.on('connection', (socket) => {
 	connections.push(socket);
 	console.log('Connected: %s kadar kişi bağlı',connections.length);
-	socket.emit('con',connections.length);
+	io.emit('asd',connections.length);
 	socket.on('disconnect',function(data){
 		connections.splice(connections.indexOf(socket),1);
 		
 		console.log('Disconnected: %s kadar kişi bağlı',connections.length);
+		io.emit('asd',connections.length);
 	});
 });
   
